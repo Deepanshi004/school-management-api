@@ -1,9 +1,10 @@
-const { Pool } = require('pg');
-require('dotenv').config();
+const mysql = require('mysql2/promise');
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {rejectUnauthorized: false }
+const db = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: '', // add your password here if set
+  database: 'school_management'
 });
 
-module.exports = pool;
+module.exports = db;
