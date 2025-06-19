@@ -1,9 +1,10 @@
 const mysql = require('mysql2/promise');
 
+console.log("Connecting to MySQL with password");
 const db = mysql.createPool({
-  host: 'localhost',
+  host: "localhost",
   user: 'root',
-  password: 'Pampam23@',
+  password: 'Pampam23@', 
   database: 'school_management'
 });
 
